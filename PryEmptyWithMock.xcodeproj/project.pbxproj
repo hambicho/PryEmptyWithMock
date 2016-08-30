@@ -15,6 +15,9 @@
 		82135A0A1D762A7800575519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82135A081D762A7800575519 /* LaunchScreen.storyboard */; };
 		82135A151D762A7800575519 /* PryEmptyWithMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82135A141D762A7800575519 /* PryEmptyWithMockTests.m */; };
 		82135A201D762B1800575519 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82135A1F1D762B1800575519 /* libOCMock.a */; };
+		82135A241D762D3500575519 /* MyLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 82135A231D762D3500575519 /* MyLocation.m */; };
+		82135A261D762D4D00575519 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82135A251D762D4D00575519 /* MapKit.framework */; };
+		82135A281D762D5400575519 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82135A271D762D5400575519 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,10 @@
 		82135A141D762A7800575519 /* PryEmptyWithMockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PryEmptyWithMockTests.m; sourceTree = "<group>"; };
 		82135A161D762A7800575519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82135A1F1D762B1800575519 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = OCMock/libOCMock.a; sourceTree = "<group>"; };
+		82135A221D762D3500575519 /* MyLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocation.h; sourceTree = "<group>"; };
+		82135A231D762D3500575519 /* MyLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocation.m; sourceTree = "<group>"; };
+		82135A251D762D4D00575519 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		82135A271D762D5400575519 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82135A281D762D5400575519 /* CoreLocation.framework in Frameworks */,
+				82135A261D762D4D00575519 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,8 @@
 		821359EE1D762A7800575519 = {
 			isa = PBXGroup;
 			children = (
+				82135A271D762D5400575519 /* CoreLocation.framework */,
+				82135A251D762D4D00575519 /* MapKit.framework */,
 				82135A1F1D762B1800575519 /* libOCMock.a */,
 				821359F91D762A7800575519 /* PryEmptyWithMock */,
 				82135A131D762A7800575519 /* PryEmptyWithMockTests */,
@@ -85,6 +96,7 @@
 		821359F91D762A7800575519 /* PryEmptyWithMock */ = {
 			isa = PBXGroup;
 			children = (
+				82135A211D762D1600575519 /* Localization */,
 				821359FD1D762A7800575519 /* AppDelegate.h */,
 				821359FE1D762A7800575519 /* AppDelegate.m */,
 				82135A001D762A7800575519 /* ViewController.h */,
@@ -113,6 +125,15 @@
 				82135A161D762A7800575519 /* Info.plist */,
 			);
 			path = PryEmptyWithMockTests;
+			sourceTree = "<group>";
+		};
+		82135A211D762D1600575519 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				82135A221D762D3500575519 /* MyLocation.h */,
+				82135A231D762D3500575519 /* MyLocation.m */,
+			);
+			name = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +238,7 @@
 			files = (
 				82135A021D762A7800575519 /* ViewController.m in Sources */,
 				821359FF1D762A7800575519 /* AppDelegate.m in Sources */,
+				82135A241D762D3500575519 /* MyLocation.m in Sources */,
 				821359FC1D762A7800575519 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
