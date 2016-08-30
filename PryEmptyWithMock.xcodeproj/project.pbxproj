@@ -14,6 +14,7 @@
 		82135A071D762A7800575519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82135A061D762A7800575519 /* Assets.xcassets */; };
 		82135A0A1D762A7800575519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82135A081D762A7800575519 /* LaunchScreen.storyboard */; };
 		82135A151D762A7800575519 /* PryEmptyWithMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82135A141D762A7800575519 /* PryEmptyWithMockTests.m */; };
+		82135A201D762B1800575519 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82135A1F1D762B1800575519 /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		82135A101D762A7800575519 /* PryEmptyWithMockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PryEmptyWithMockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82135A141D762A7800575519 /* PryEmptyWithMockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PryEmptyWithMockTests.m; sourceTree = "<group>"; };
 		82135A161D762A7800575519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82135A1F1D762B1800575519 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = OCMock/libOCMock.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82135A201D762B1800575519 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		821359EE1D762A7800575519 = {
 			isa = PBXGroup;
 			children = (
+				82135A1F1D762B1800575519 /* libOCMock.a */,
 				821359F91D762A7800575519 /* PryEmptyWithMock */,
 				82135A131D762A7800575519 /* PryEmptyWithMockTests */,
 				821359F81D762A7800575519 /* Products */,
@@ -363,8 +367,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OCMock";
 				INFOPLIST_FILE = PryEmptyWithMockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OCMock",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps4s.PryEmptyWithMockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PryEmptyWithMock.app/PryEmptyWithMock";
@@ -375,8 +388,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OCMock";
 				INFOPLIST_FILE = PryEmptyWithMockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OCMock",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps4s.PryEmptyWithMockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PryEmptyWithMock.app/PryEmptyWithMock";
